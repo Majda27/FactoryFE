@@ -1,0 +1,7 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+p{
+    margin-right: 400px;
+    margin-left: 400px;
+}
