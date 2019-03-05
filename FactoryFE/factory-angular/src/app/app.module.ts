@@ -8,6 +8,9 @@ import { FormateurComponent } from './formateur/formateur.component';
 import { StagiaireComponent } from './stagiaire/stagiaire.component';
 import { FormationComponent } from './formation/formation.component';
 import { MatiereComponent } from './matiere/matiere.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,18 @@ import { MatiereComponent } from './matiere/matiere.component';
     FormateurComponent,
     StagiaireComponent,
     FormationComponent,
-    MatiereComponent
+    MatiereComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
