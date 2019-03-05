@@ -1,0 +1,21 @@
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let panel of config.panels">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ panel.name }}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{ panel.description }}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>Que voulez vous faire?</p>
+    <ul>
+    <li>Gestion du matériel</li>
+    <li>Gestion les élèves</li>
+    <li>Gestion des formateurs</li>
+    <li>Gestion des modules</li>
+    <li>Gestion des formations</li> 
+    </ul>
+  </mat-expansion-panel>
+</mat-accordion>
+<router-outlet></router-outlet>

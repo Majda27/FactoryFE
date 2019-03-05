@@ -8,9 +8,16 @@ import { FormateurComponent } from './formateur/formateur.component';
 import { StagiaireComponent } from './stagiaire/stagiaire.component';
 import { FormationComponent } from './formation/formation.component';
 import { MatiereComponent } from './matiere/matiere.component';
-import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { 
+  BrowserAnimationsModule 
+} from '@angular/platform-browser/animations';
+import { 
+  MatExpansionModule 
+} from '@angular/material';
+import { MainpageComponent } from './mainpage/mainpage.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +27,12 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
     StagiaireComponent,
     FormationComponent,
     MatiereComponent,
-    MainNavComponent
+    SidebarComponent,
+    MainpageComponent,
   ],
   imports: [
+    MatExpansionModule,
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     LayoutModule,

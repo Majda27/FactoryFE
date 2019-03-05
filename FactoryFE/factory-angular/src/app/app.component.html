@@ -1,18 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Bienvenue chez {{ title }} !
-  </h1>
-  <img width="300" alt="LF Logo" src="https://cdn.good-halal.com/wp-content/uploads/2017/07/19601402_1896975480557700_1397031229425714235_n-800x800.jpg">
-</div>
-<hr>
-<p>
-  <button type="button" class="btn btn-dark btn-lg btn-block">Materiel</button><br/>
-  <button type="button" class="btn btn-dark btn-lg btn-block">Formateurs</button><br/>
-  <button type="button" class="btn btn-dark btn-lg btn-block">Eleves</button><br/>
-  <button type="button" class="btn btn-dark btn-lg btn-block">Matières</button>
-</p>
-
-
-
+  <div class="page">
+    <div class="page__sidebar"><app-sidebar></app-sidebar></div>
+    <div class="page__content"><app-mainpage></app-mainpage></div>
+  </div>
+    
 <router-outlet></router-outlet>
