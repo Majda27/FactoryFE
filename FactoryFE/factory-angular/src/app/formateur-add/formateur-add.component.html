@@ -1,3 +1,26 @@
-<p>
-  formateur-add works!
-</p>
+<h2>Veuillez ajouter un formateur</h2><br>
+<div>
+<label>Id:
+  <input [(ngModel)]="newFormateur.id" />
+</label><br>
+<label>Nom:
+  <input [(ngModel)]="newFormateur.nom" />
+</label><br>
+<label>Prenom:
+  <input [(ngModel)]="newFormateur.prenom" />
+</label><br>
+<label>Adresse:
+  <input [(ngModel)]="newFormateur.adresse" />
+</label><br>
+<label>Telephone:
+  <input [(ngModel)]="newFormateur.tel" />
+</label><br>
+<label>Matiere:
+  <input [(ngModel)]="newFormateur.matiere" />
+</label><br>
+
+<button (click)="addValues()">
+  Ajouter
+</button>
+
+</div>
