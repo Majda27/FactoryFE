@@ -21,7 +21,7 @@ export class FormateurService {
   constructor(private http: HttpClient) { }
 
 
-private apiUrl="http://localhost:8081/boot/rest/formateur";
+private apiUrl="http://localhost:8082/boot/rest/formateur";
 //url to web apli
 
 
@@ -61,5 +61,9 @@ deleteFormateur (formateur: Formateur | number): Observable<Formateur> {
 updateFormateur (formateur: Formateur): Observable<any> {
   return this.http.put(this.apiUrl, formateur, httpOptions);
  
+}
+
+addFormateur(formateur: Formateur): Observable<Formateur> {
+  return this.http.post<Formateur>(this.apiUrl, formateur, httpOptions);
 }
 }
