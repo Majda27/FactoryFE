@@ -5,7 +5,7 @@ export class Formateur {
     nom: string;
     prenom:string;
     adresse:string;
-    numTel: string;
+    tel: string;
     matiere : Matiere;
     }
   

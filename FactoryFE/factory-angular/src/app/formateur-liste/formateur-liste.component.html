@@ -1,3 +1,36 @@
-<p>
-  formateur-liste works!
-</p>
+<div class="formateurList">
+  <h1>Liste des formateurs</h1>
+  <ul class="formeteurShortView">
+    <li *ngFor="let formateur of formateurs">
+
+      <span class="badge">id: {{formateur.id}}</span> nom: {{formateur.nom}} / prenom: {{formateur.prenom}} / adresse:
+      {{formateur.adresse}} / numTel: {{formateur.tel}} / matiere: {{formateur.matiere}} 
+     
+      
+    </li>
+
+   <br style="clear:both;" />
+  </ul>
+</div>
+
+
+<div *ngIf="formateur">
+    <h2>{{formateur.nom | uppercase}} Détails</h2>
+    <div><span>id: </span>{{formateur.id}}</div>
+<div>
+
+    <label><input [(ngModel)]="formateur.id" placeholder="id" /></label>
+  <input [(ngModel)]="formateur.nom" placeholder="nom" />
+  <input [(ngModel)]="formateur.prenom" placeholder="prenom" />
+  <input [(ngModel)]="formateur.adresse" placeholder="adresse" />
+  <input [(ngModel)]="formateur.tel" placeholder="tel" />
+  <input [(ngModel)]="formateur.matiere" placeholder="matiere" />
+
+</div>
+<button (click)="goBack()">Revenir en arrière</button>
+<button (click)="save()">Enregistrer les changements</button>
+<button class="delete" title="delete formateur" (click)="delete(formateur)">Supprimer formateur</button>
+</div>
+
+
+

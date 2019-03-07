@@ -34,6 +34,9 @@ import { MatiereAddComponent } from './matiere-add/matiere-add.component';
 import { ModuleAddComponent } from './module-add/module-add.component';
 import { FormationAddComponent } from './formation-add/formation-add.component';
 
+import { HttpClientModule }    from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,7 +75,9 @@ import { FormationAddComponent } from './formation-add/formation-add.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
