@@ -1,18 +1,36 @@
 <div class="formateurList">
-  <h1>Liste des formateurs</h1>
-  <ul class="formeteurShortView">
-    <li *ngFor="let formateur of formateurs" >
+  <h1 style="font-family: Tahoma, Geneva, sans-serif;">Liste des formateurs</h1>
+  
      
-      <span class="badge">id: {{formateur.id}}</span> Nom: {{formateur.nom}} / Prenom: {{formateur.prenom}} / Adresse:
-      {{formateur.adresse}} / Telephone: {{formateur.tel}} / Matiere: {{formateur.matiere}} 
-      <button class="delete" title="delete formateur" (click)="delete(formateur)">Supprimer formateur</button>
-      
-      <a routerLink="/formateuredit/{{formateur.id}}" >Modifier</a>
-      
-    </li>
+      <!-- <span class="badge">id: {{formateur.id}}</span> Nom: {{formateur.nom}} / Prenom: {{formateur.prenom}} / Adresse:
+      {{formateur.adresse}} / Telephone: {{formateur.tel}} / Matiere: {{formateur.matiere}}  -->
+
+      <table class="table">
+          <thead >
+            <tr>
+              <th>ID</th>
+              <th>Nom</th>
+              <th>Prenom</th>
+              <th>Adresse</th>
+              <th>Telephone</th>
+              <th>Matiere</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let formateur of formateurs">
+              <td>{{formateur.id}}</td>
+              <td>{{formateur.nom}}</td>
+              <td>{{formateur.prenom}}</td>
+              <td>{{formateur.adresse}}</td>
+              <td>{{formateur.tel}}</td>
+              <td>{{formateur.matiere}}</td>
+              <button class="btn btn-warning" style="margin-bottom: 10px;background-color:darkorange;" title="delete formateur" (click)="delete(formateur)">Supprimer formateur</button>
+              <a routerLink="/formateuredit/{{formateur.id}}" ><button class="btn btn-warning" style="margin-left: 15px;margin-bottom: 10px;background-color:darkorange;">Modifier</button></a>
+            </tr>
+          </tbody>
+  </table>
 
    <br style="clear:both;" />
-  </ul>
 </div>
 
 

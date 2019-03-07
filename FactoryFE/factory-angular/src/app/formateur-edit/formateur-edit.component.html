@@ -1,19 +1,33 @@
-<h2>Page d'édition du formateur à l'id: {{formateur.id}}</h2>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+<h2>Edition du formateur <br>[{{formateur.id}}].{{formateur.nom}}</h2>
 
+<div class="container">
+    <form action="/action_page.php">
+        <div class="form-group">
+            <label>Nom:</label>
+            <input [(ngModel)]="formateur.nom" placeholder="Nom" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Prenom:</label>
+            <input [(ngModel)]="formateur.prenom" placeholder="Prenom" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Adresse:</label>
+            <input [(ngModel)]="formateur.adresse" placeholder="Adresse" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Numero de telephone:</label>
+            <input [(ngModel)]="formateur.tel" placeholder="Numero de telephone" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Matiere:</label>
+            <input [(ngModel)]="formateur.matiere" placeholder="Matiere" type="text"/>
+        </div>
 
-
-<div>
-
-
-    <label> <input [(ngModel)]="formateur.nom" placeholder="nom" /></label><br>
-    <label><input [(ngModel)]="formateur.prenom" placeholder="prenom" /></label><br>
-    <label> <input [(ngModel)]="formateur.adresse" placeholder="adresse" /></label><br>
-    <label> <input [(ngModel)]="formateur.tel" placeholder="tel" /></label><br>
-    <label> <input [(ngModel)]="formateur.matiere" placeholder="matiere" /></label><br>
-
+        <button type="submit" class="btn btn-warning" (click)="goBack()" style="margin-top:30px;background-color: darkorange;">Revenir en arriere</button>
+        <button type="submit" class="btn btn-warning" (click)="save()" style="margin-top:30px;background-color: darkorange;margin-left: 15px;">Enregistrer les changements</button>
+    </form>
 </div>
-<button (click)="goBack()">Revenir en arrière</button>
-<button (click)="save()" >Enregistrer les changements</button>
-
-
