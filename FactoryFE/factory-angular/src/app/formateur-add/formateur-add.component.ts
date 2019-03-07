@@ -10,7 +10,6 @@ import { FormateurService } from '../formateur.service';
 export class FormateurAddComponent implements OnInit {
 
 
-  selectedFormateur: Formateur;
   formateurs;
   newFormateur: Formateur;
   
@@ -20,14 +19,10 @@ export class FormateurAddComponent implements OnInit {
 
 
   ngOnInit() {
-    this.formateurservice.getFormateurs().subscribe(
-      formateurs => this.formateurs = formateurs
-    );
+ 
   }
  
-  ifClickOnFormateur(formateur: Formateur) {
-     this.selectedFormateur = formateur;
-   } 
+ 
 
   addValues(): void {
     

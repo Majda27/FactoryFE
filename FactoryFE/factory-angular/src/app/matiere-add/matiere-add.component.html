@@ -1,3 +1,30 @@
-<p>
-  matiere-add works!
-</p>
+
+<h2>Veuillez ajouter une matiere</h2><br>
+  <div>
+    <label>Id:
+      <input [(ngModel)]="newMatiere.id" />
+    </label><br>
+    <label>Titre:
+      <input [(ngModel)]="newMatiere.titre" />
+    </label><br>
+    <label>Durée:
+      <input [(ngModel)]="newMatiere.duree" />
+    </label><br>
+    <label>Niveau:
+      <input [(ngModel)]="newMatiere.niveau" />
+    </label><br>
+    <label>Pré-requis:
+      <input [(ngModel)]="newMatiere.prerequis" />
+    </label><br>
+    <label>Contenu:
+      <input [(ngModel)]="newMatiere.contenu" />
+    </label><br>
+    <label>Objectifs:
+      <textarea [(ngModel)]="newMatiere.objectifs" style="resize:none"></textarea>
+    </label><br>
+
+    <button (click)="addValues()">
+      Ajouter
+    </button>
+
+  </div>
