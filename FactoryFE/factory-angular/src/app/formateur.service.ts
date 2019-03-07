@@ -33,6 +33,13 @@ getFormateurs(): Observable<Formateur[]> {
   
 }
 
+//on renvoi un formateur en particulier (celui qui à l'id : id)
+getFormateur(id:number): Observable<Formateur> {
+  const url2call = this.apiUrl + '/' + id;
+  return this.http.get<Formateur>(url2call) ;
+  
+}
+
 /** POST: add a new formateur to the server */
 // addFormateur (formateur: Formateur): Observable<Formateur> {
 //   return this.http.post<Formateur>(this.apiUrl, formateur, httpOptions).pipe(

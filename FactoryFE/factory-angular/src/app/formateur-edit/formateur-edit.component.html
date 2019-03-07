@@ -1,3 +1,19 @@
-<p>
-  formateur-edit works!
-</p>
+<h2>Page d'édition du formateur à l'id: {{formateur.id}}</h2>
+
+
+
+
+<div>
+
+
+    <label> <input [(ngModel)]="formateur.nom" placeholder="nom" /></label><br>
+    <label><input [(ngModel)]="formateur.prenom" placeholder="prenom" /></label><br>
+    <label> <input [(ngModel)]="formateur.adresse" placeholder="adresse" /></label><br>
+    <label> <input [(ngModel)]="formateur.tel" placeholder="tel" /></label><br>
+    <label> <input [(ngModel)]="formateur.matiere" placeholder="matiere" /></label><br>
+
+</div>
+<button (click)="goBack()">Revenir en arrière</button>
+<button (click)="save()" >Enregistrer les changements</button>
+
+

@@ -20,6 +20,7 @@ import { StagiaireAddComponent } from './stagiaire-add/stagiaire-add.component';
 import { MatiereAddComponent } from './matiere-add/matiere-add.component';
 import { ModuleAddComponent } from './module-add/module-add.component';
 import { FormationAddComponent } from './formation-add/formation-add.component';
+import { FormateurEditComponent } from './formateur-edit/formateur-edit.component';
 
 const routes: Routes = [
   { path: 'ordinateurliste', component: OrdinateurListeComponent },
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: 'matiereadd', component: MatiereAddComponent }, 
   { path: 'moduleadd', component: ModuleAddComponent }, 
   { path: 'formationadd', component: FormationAddComponent },
+  { path: 'formateuredit/:id', component: FormateurEditComponent }
 
 ];
 

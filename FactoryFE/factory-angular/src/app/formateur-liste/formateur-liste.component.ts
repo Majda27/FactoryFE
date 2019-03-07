@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 import { Formateur } from '../formateur';
 import { FormateurService } from '../formateur.service';
@@ -16,7 +16,7 @@ export class FormateurListeComponent implements OnInit {
 
   selectedFormateur: Formateur;
   formateurs;
-  formateur;
+  
 
   constructor(private formateurService: FormateurService,
     private location: Location) { }
@@ -30,24 +30,19 @@ export class FormateurListeComponent implements OnInit {
       .subscribe(formateurs => this.formateurs = formateurs);
   }
 
-  // ifClickOnFormateur(formateur: Formateur): void {
-  //   this.selectedFormateur = formateur;
+// ifClickOnFormateur(formateur: Formateur): void {
+//      this.selectedFormateur = formateur;
 
-  //  }
+//   }
 
   delete(formateur: Formateur): void {
     this.formateurs = this.formateurs.filter(f => f !== formateur);
     this.formateurService.deleteFormateur(formateur).subscribe();
   }
 
+  
 
 
-  goBack(): void {
-    this.location.back();
-  }
 
-  save(): void {
-    this.formateurService.updateFormateur(this.formateur)
-      .subscribe(() => this.goBack());
-  }
+ 
 }
