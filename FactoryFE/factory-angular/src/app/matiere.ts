@@ -5,5 +5,5 @@ export class Matiere {
     objectifs:string;
     prerequis:string;
     contenu:string;
-    niveau:string;
+    niveau:number;
     }

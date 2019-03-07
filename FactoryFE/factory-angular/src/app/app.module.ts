@@ -38,6 +38,7 @@ import { MaterielEditComponent } from './materiel-edit/materiel-edit.component';
 
 import { HttpClientModule }    from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MatiereEditComponent } from './matiere-edit/matiere-edit.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { FormsModule } from '@angular/forms';
     FormationAddComponent,
     FormateurEditComponent,
     MaterielEditComponent,
+    MatiereEditComponent,
   ],
   imports: [
     MatExpansionModule,

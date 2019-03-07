@@ -1,0 +1,20 @@
+<h2>Page d'édition de la matiere dont l'id est: {{matiere.id}}</h2>
+
+
+
+
+<div>
+
+
+    <label> <input [(ngModel)]="matiere.id" placeholder="id" /></label><br>
+    <label><input [(ngModel)]="matiere.titre" placeholder="titre" /></label><br>
+    <label> <input [(ngModel)]="matiere.duree" placeholder="duree" /></label><br>
+    <label> <input [(ngModel)]="matiere.objectifs" placeholder="objectifs" /></label><br>
+    <label> <input [(ngModel)]="matiere.prerequis" placeholder="prerequis" /></label><br>
+    <label> <input [(ngModel)]="matiere.contenu" placeholder="contenu" /></label><br>
+    <label> <input [(ngModel)]="matiere.niveau" placeholder="niveau" /></label>
+
+
+<button (click)="goBack()">Revenir en arrière</button>
+<button (click)="save()" >Enregistrer les changements</button>
+</div>

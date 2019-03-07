@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Matiere } from '../matiere';
+import { MatiereService } from '../matiere.service';
+
 
 @Component({
   selector: 'app-matiere-add',
@@ -6,10 +9,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./matiere-add.component.css']
 })
 export class MatiereAddComponent implements OnInit {
-
-  constructor() { }
+  matieres;
+  newMatiere: Matiere;
+  
+  constructor(private matiereservice: MatiereService) {
+    this.newMatiere={id: 1, titre:'', duree: 1, niveau:1, prerequis:'', contenu:'', objectifs:''}
+   }
 
   ngOnInit() {
+    
+    
   }
 
+
+
+  addValues(): void {
+    
+    this.matiereservice.addMatiere(this.newMatiere).subscribe(matiere => {
+      this.matieres.push(matiere);
+    });
+    alert("La matiere a bien été ajoutée");   
+  }
+
+/*   addDuree(duree: number): void {
+    duree = duree;
+    if (!duree) { return; }
+    this.matiereservice.addMatiere({ duree } as Matiere)
+      .subscribe(matiere => {
+        this.matieres.push(matiere);
+      });
+  } */
 }

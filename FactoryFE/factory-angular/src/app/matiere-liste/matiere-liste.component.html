@@ -1,0 +1,16 @@
+<div class="matiereList">
+  <h1>Liste des matières</h1>
+  <div class="matiereShortView" *ngFor="let matiere of matieres" >
+
+    
+      ID : {{matiere.id}} / Titre : {{matiere.titre}} <br>
+      <button class="delete" title="delete matiere" (click)="delete(matiere)">Supprimer une matiere</button>
+
+      <a routerLink="/matiereedit/{{matiere.id}}" >Modifier</a>
+
+    <br style="clear:both;" />
+
+
+
+  </div>
+</div>
