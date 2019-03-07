@@ -1,12 +1,9 @@
-<mat-accordion>
-  <mat-expansion-panel *ngFor="let panel of config.panels">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
+<mat-accordion style="background-color: white;">
+  <mat-expansion-panel *ngFor="let panel of config.panels" style="background-color: white;">
+    <mat-expansion-panel-header style="background-color: white;">
+      <mat-panel-title style="background-color: white;"> 
         {{ panel.name }}
       </mat-panel-title>
-      <mat-panel-description>
-        {{ panel.description }}
-      </mat-panel-description>
     </mat-expansion-panel-header>
     <ul class="a">
     <li><a routerLink="{{ panel.pathliste }}">Gérer</a></li>
