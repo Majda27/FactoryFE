@@ -2,13 +2,15 @@
 
 .page {
     display: flex;
+    background-color: white;
   }
   .page__sidebar {
-    background-color: black;
+    background-color: white;
     color: white }
 
   .page__content {
-    flex: 1
+    background-color: white;
+    flex: 1;
   }
 
   h2{display:flex;

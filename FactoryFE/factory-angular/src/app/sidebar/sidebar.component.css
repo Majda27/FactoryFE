@@ -1,14 +1,19 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+*{
+  background-color: white;
+}
 .page {
     display: flex;
+    background-color: white;
   }
   .page__sidebar {
-    background-color: black;
-    color: white }
+    background-color: white;
+    color: white; }
 
   .page__content {
-    flex: 1
+    flex: 1;
+    background-color: white;
   }
 
   h2{display:flex;
@@ -19,4 +24,8 @@
   display: flex; 
   justify-content: center;
   width: 300px;
+}
+
+ul.a {
+  list-style-type: circle;
 }

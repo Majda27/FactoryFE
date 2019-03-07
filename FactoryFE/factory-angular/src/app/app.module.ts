@@ -33,6 +33,8 @@ import { StagiaireAddComponent } from './stagiaire-add/stagiaire-add.component';
 import { MatiereAddComponent } from './matiere-add/matiere-add.component';
 import { ModuleAddComponent } from './module-add/module-add.component';
 import { FormationAddComponent } from './formation-add/formation-add.component';
+import { FormateurEditComponent } from './formateur-edit/formateur-edit.component';
+import { MaterielEditComponent } from './materiel-edit/materiel-edit.component';
 
 import { HttpClientModule }    from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -64,6 +66,8 @@ import { FormsModule } from '@angular/forms';
     MatiereAddComponent,
     ModuleAddComponent,
     FormationAddComponent,
+    FormateurEditComponent,
+    MaterielEditComponent,
   ],
   imports: [
     MatExpansionModule,
