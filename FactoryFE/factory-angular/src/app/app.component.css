@@ -10,15 +10,18 @@ p{
 
 .page {
     display: flex;
+    background-color: white;
   }
+
   .page__sidebar {
-    background-color: black;
-    color: white }
-
+    background-color: white;
+    color: white; }
+  
   .page__content {
-    flex: 1
+    flex: 1;
+    background-color: white;
   }
-
+ 
   h2{display:flex;
     justify-content: center;
   }
