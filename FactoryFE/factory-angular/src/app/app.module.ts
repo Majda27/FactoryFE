@@ -33,6 +33,8 @@ import { StagiaireAddComponent } from './stagiaire-add/stagiaire-add.component';
 import { MatiereAddComponent } from './matiere-add/matiere-add.component';
 import { ModuleAddComponent } from './module-add/module-add.component';
 import { FormationAddComponent } from './formation-add/formation-add.component';
+import { FormateurEditComponent } from './formateur-edit/formateur-edit.component';
+import { MaterielEditComponent } from './materiel-edit/materiel-edit.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,8 @@ import { FormationAddComponent } from './formation-add/formation-add.component';
     MatiereAddComponent,
     ModuleAddComponent,
     FormationAddComponent,
+    FormateurEditComponent,
+    MaterielEditComponent,
   ],
   imports: [
     MatExpansionModule,
