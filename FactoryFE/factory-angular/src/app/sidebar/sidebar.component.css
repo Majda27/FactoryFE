@@ -30,3 +30,7 @@ ul.a {
   list-style-type: circle;
   text-align: left;
 }
+
+a{
+  color: black;
+}
