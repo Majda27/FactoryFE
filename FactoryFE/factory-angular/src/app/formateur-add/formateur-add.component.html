@@ -1,26 +1,33 @@
-<h2>Veuillez ajouter un formateur</h2><br>
-<div>
-<label>Id:
-  <input [(ngModel)]="newFormateur.id" />
-</label><br>
-<label>Nom:
-  <input [(ngModel)]="newFormateur.nom" />
-</label><br>
-<label>Prenom:
-  <input [(ngModel)]="newFormateur.prenom" />
-</label><br>
-<label>Adresse:
-  <input [(ngModel)]="newFormateur.adresse" />
-</label><br>
-<label>Telephone:
-  <input [(ngModel)]="newFormateur.tel" />
-</label><br>
-<label>Matiere:
-  <input [(ngModel)]="newFormateur.matiere" />
-</label><br>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<button (click)="addValues()">
-  Ajouter
-</button>
+<h2>Ajout d'un formateur</h2>
+
+<div class="container">
+    <form action="/action_page.php">
+        <div class="form-group">
+            <label>Nom:</label>
+            <input [(ngModel)]="newFormateur.nom"  placeholder="Nom" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Prenom:</label>
+            <input [(ngModel)]="newFormateur.prenom" placeholder="Prenom" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Adresse:</label>
+            <input [(ngModel)]="newFormateur.adresse" placeholder="Adresse" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Numero de telephone:</label>
+            <input [(ngModel)]="newFormateur.tel" placeholder="Numero de telephone" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Matiere:</label>
+            <input [(ngModel)]="newFormateur.matiere" placeholder="Matiere" type="text"/>
+        </div>
+
+        <button type="submit" class="btn btn-warning" (click)="addValues()" style="margin-top:30px;background-color: darkorange;margin-right: 30px;">Ajouter</button>
+    </form>
 
 </div>

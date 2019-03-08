@@ -15,7 +15,7 @@ const httpOptions = {
 
 export class MatiereService {
 
-  private matieresUrl = 'http://localhost:8083/boot/rest/matiere';
+  private matieresUrl = 'http://localhost:8082/boot/rest/matiere';
   
 
   constructor(private http: HttpClient ) { }

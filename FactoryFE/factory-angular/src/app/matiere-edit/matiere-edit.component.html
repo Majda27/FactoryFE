@@ -1,20 +1,38 @@
-<h2>Page d'édition de la matiere dont l'id est: {{matiere.id}}</h2>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+<h2>Edition d'une matière <br>[{{matiere.id}}].{{matiere.titre}}</h2>
 
+<div class="container">
+    <form action="/action_page.php">
+        <div class="form-group">
+            <label>Titre:</label>
+            <input [(ngModel)]="matiere.titre" placeholder="Titre" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Durée:</label>
+            <input [(ngModel)]="matiere.duree" placeholder="Durée" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Objectifs:</label>
+            <input [(ngModel)]="matiere.objectifs" placeholder="Objectifs" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Pré-requis:</label>
+            <input [(ngModel)]="matiere.prerequis" placeholder="Pré-requis" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Contenu:</label>
+            <input [(ngModel)]="matiere.contenu" placeholder="Contenu" type="text"/>
+        </div>
+        <div class="form-group">
+                <label>Niveau:</label>
+                <input [(ngModel)]="matiere.niveau" placeholder="Niveau" type="text"/>
+            </div>
 
+        <button type="submit" class="btn btn-warning" (click)="goBack()" style="margin-top:30px;background-color: darkorange;">Revenir en arriere</button>
+        <button type="submit" class="btn btn-warning" (click)="save()" style="margin-top:30px;background-color: darkorange;margin-left: 15px;">Enregistrer les changements</button>
+    </form>
 
-<div>
-
-
-    <label> <input [(ngModel)]="matiere.id" placeholder="id" /></label><br>
-    <label><input [(ngModel)]="matiere.titre" placeholder="titre" /></label><br>
-    <label> <input [(ngModel)]="matiere.duree" placeholder="duree" /></label><br>
-    <label> <input [(ngModel)]="matiere.objectifs" placeholder="objectifs" /></label><br>
-    <label> <input [(ngModel)]="matiere.prerequis" placeholder="prerequis" /></label><br>
-    <label> <input [(ngModel)]="matiere.contenu" placeholder="contenu" /></label><br>
-    <label> <input [(ngModel)]="matiere.niveau" placeholder="niveau" /></label>
-
-
-<button (click)="goBack()">Revenir en arrière</button>
-<button (click)="save()" >Enregistrer les changements</button>
 </div>

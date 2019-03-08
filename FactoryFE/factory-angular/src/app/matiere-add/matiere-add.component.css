@@ -1,0 +1,17 @@
+label{
+    display: inline-block;
+    clear: left;
+    width: 250px;
+    text-align: right;
+
+}
+input {
+  display: inline-block;
+  margin-right: 280px;
+  margin-left: 15px;
+}
+
+h2{
+    margin-bottom: 50px;
+    font-family: Tahoma, Geneva, sans-serif;
+}

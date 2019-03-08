@@ -1,16 +1,33 @@
+
 <div class="matiereList">
-  <h1>Liste des matières</h1>
-  <div class="matiereShortView" *ngFor="let matiere of matieres" >
-
-    
-      ID : {{matiere.id}} / Titre : {{matiere.titre}} <br>
-      <button class="delete" title="delete matiere" (click)="delete(matiere)">Supprimer une matiere</button>
-
-      <a routerLink="/matiereedit/{{matiere.id}}" >Modifier</a>
-
-    <br style="clear:both;" />
-
-
-
+    <h2 style="font-family: Tahoma, Geneva, sans-serif; margin-right: 80px;">Liste des matières</h2>
+  
+        <table class="table">
+            <thead >
+              <tr>
+                <th>ID</th>
+                <th>Titre</th>
+                <th>Durée</th>
+                <th>Objectif</th>
+                <th>Pré-requis</th>
+                <th>Contenu</th>
+                <th>Niveau</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let matiere of matieres">
+                <td>{{matiere.id}}</td>
+                <td>{{matiere.titre}}</td>
+                <td>{{matiere.duree}}</td>
+                <td>{{matiere.objectif}}</td>
+                <td>{{matiere.prerequis}}</td>
+                <td>{{matiere.contenu}}</td>
+                <td>{{matiere.niveau}}</td>
+                <button class="btn btn-warning" style="margin-bottom: 10px;background-color:darkorange;" title="delete matiere" (click)="delete(matiere)">Supprimer</button>
+                <a routerLink="/matiereedit/{{matiere.id}}" ><button class="btn btn-warning" style="margin-left: 15px;margin-bottom: 10px;background-color:darkorange;">Modifier</button></a>
+              </tr>
+            </tbody>
+    </table>
+  
+     <br style="clear:both;" />
   </div>
-</div>

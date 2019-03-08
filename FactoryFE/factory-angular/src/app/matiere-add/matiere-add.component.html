@@ -1,30 +1,37 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<h2>Veuillez ajouter une matiere</h2><br>
-  <div>
-    <label>Id:
-      <input [(ngModel)]="newMatiere.id" />
-    </label><br>
-    <label>Titre:
-      <input [(ngModel)]="newMatiere.titre" />
-    </label><br>
-    <label>Durée:
-      <input [(ngModel)]="newMatiere.duree" />
-    </label><br>
-    <label>Niveau:
-      <input [(ngModel)]="newMatiere.niveau" />
-    </label><br>
-    <label>Pré-requis:
-      <input [(ngModel)]="newMatiere.prerequis" />
-    </label><br>
-    <label>Contenu:
-      <input [(ngModel)]="newMatiere.contenu" />
-    </label><br>
-    <label>Objectifs:
-      <textarea [(ngModel)]="newMatiere.objectifs" style="resize:none"></textarea>
-    </label><br>
+<h2>Ajout d'une matière</h2>
 
-    <button (click)="addValues()">
-      Ajouter
-    </button>
+<div class="container">
+    <form action="/action_page.php">
+        <div class="form-group">
+            <label>Titre:</label>
+            <input [(ngModel)]="newMatiere.titre"  placeholder="Titre" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Durée:</label>
+            <input [(ngModel)]="newMatiere.duree" placeholder="Durée" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Niveau:</label>
+            <input [(ngModel)]="newMatiere.niveau" placeholder="Niveau" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Pré-requis:</label>
+            <input [(ngModel)]="newMatiere.prerequis" placeholder="Pré-requis" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Contenu:</label>
+            <input [(ngModel)]="newMatiere.contenu" placeholder="Contenu" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Objectif:</label>
+            <input [(ngModel)]="newMatiere.objectif" placeholder="Objectif" type="text"/>
+        </div>
 
-  </div>
+        <button type="submit" class="btn btn-warning" (click)="addValues()" style="margin-top:30px;background-color: darkorange;margin-right: 30px;">Ajouter</button>
+    </form>
+
+</div>
