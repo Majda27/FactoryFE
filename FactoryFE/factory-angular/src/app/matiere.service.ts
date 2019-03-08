@@ -49,7 +49,9 @@ deleteMatiere (matiere: Matiere | number): Observable<Matiere> {
 
 /** PUT: update the matiere on the server */
 updateMatiere (matiere: Matiere): Observable<any> {
-  return this.http.put(this.matieresUrl, matiere, httpOptions);
+  const id = typeof matiere === 'number' ? matiere : matiere.id;
+  const url = `${this.matieresUrl}/${id}`;
+  return this.http.put(url, matiere, httpOptions);
  
 }
   

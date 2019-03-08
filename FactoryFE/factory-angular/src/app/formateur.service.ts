@@ -59,7 +59,9 @@ getFormateur(id:number): Observable<Formateur> {
 
   /** PUT: update the formateur on the server */
   updateFormateur (formateur: Formateur): Observable<any> {
-    return this.http.put(this.apiUrl, formateur, httpOptions);
+    const id = typeof formateur === 'number' ? formateur : formateur.id;
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.put(url, formateur, httpOptions);
   
   }
 
