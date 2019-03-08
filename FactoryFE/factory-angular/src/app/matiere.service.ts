@@ -15,7 +15,7 @@ const httpOptions = {
 
 export class MatiereService {
 
-  private matieresUrl = 'http://localhost:8083/boot/rest/matiere';
+  private matieresUrl = 'http://localhost:8082/boot/rest/matiere';
   
 
   constructor(private http: HttpClient ) { }
@@ -31,13 +31,12 @@ export class MatiereService {
     return this.http.post<Matiere>(this.matieresUrl, matiere, httpOptions);
   }
 
-  //on renvoi un matiere en particulier (celui qui à l'id : id)
+  //on renvoi une matiere en particulier (celui qui à l'id : id)
 getMatiere(id:number): Observable<Matiere> {
   const url2call = this.matieresUrl + '/' + id;
   return this.http.get<Matiere>(url2call) ;
   
 }
-
 
 /** DELETE: delete the matiere from the server */
 deleteMatiere (matiere: Matiere | number): Observable<Matiere> {
