@@ -10,11 +10,10 @@ import { FormateurService } from '../formateur.service';
 export class FormateurAddComponent implements OnInit {
 
 
-  formateurs;
   newFormateur: Formateur;
   
   constructor(private formateurservice: FormateurService) {
-    this.newFormateur={id: 1, nom:'', prenom:'', adresse:'', tel:'', matiere:null}
+    this.newFormateur= {id: 1, nom:'', prenom:'', adresse:'', tel:'', matiere:null };
    }
 
 
@@ -22,15 +21,10 @@ export class FormateurAddComponent implements OnInit {
  
   }
  
- 
 
   addValues(): void {
-    
-    this.formateurservice.addFormateur(this.newFormateur).subscribe(formateur => {
-      this.formateurs.push(formateur);
-      
-    });
-    alert("Le formateur a bien été ajouté");
+    this.formateurservice.addFormateur(this.newFormateur).subscribe();
+    alert("Formateur bien ajouté");
   }
 
 /*   addDuree(duree: number): void {

@@ -21,7 +21,7 @@ export class FormateurService {
   constructor(private http: HttpClient) { }
 
 
-private apiUrl="http://localhost:8082/boot/rest/formateur";
+private apiUrl="http://localhost:8083/boot/rest/formateur";
 //url to web apli
 
 
@@ -48,22 +48,22 @@ getFormateur(id:number): Observable<Formateur> {
 //   );
 // }
 
-/** DELETE: delete the formateur from the server */
-deleteFormateur (formateur: Formateur | number): Observable<Formateur> {
-  const id = typeof formateur === 'number' ? formateur : formateur.id;
-  const url = `${this.apiUrl}/${id}`;
+  /** DELETE: delete the formateur from the server */
+  deleteFormateur (formateur: Formateur | number): Observable<Formateur> {
+    const id = typeof formateur === 'number' ? formateur : formateur.id;
+    const url = `${this.apiUrl}/${id}`;
 
-  return this.http.delete<Formateur>(url, httpOptions);
+    return this.http.delete<Formateur>(url, httpOptions);
+    
+  }
+
+  /** PUT: update the formateur on the server */
+  updateFormateur (formateur: Formateur): Observable<any> {
+    return this.http.put(this.apiUrl, formateur, httpOptions);
   
-}
+  }
 
-/** PUT: update the formateur on the server */
-updateFormateur (formateur: Formateur): Observable<any> {
-  return this.http.put(this.apiUrl, formateur, httpOptions);
- 
-}
-
-addFormateur(formateur: Formateur): Observable<Formateur> {
-  return this.http.post<Formateur>(this.apiUrl, formateur, httpOptions);
-}
+  addFormateur(formateur: Formateur): Observable<Formateur> {
+    return this.http.post<Formateur>(this.apiUrl, formateur, httpOptions);
+  }
 }

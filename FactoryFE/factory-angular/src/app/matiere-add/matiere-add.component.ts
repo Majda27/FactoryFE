@@ -9,7 +9,7 @@ import { MatiereService } from '../matiere.service';
   styleUrls: ['./matiere-add.component.css']
 })
 export class MatiereAddComponent implements OnInit {
-  matieres;
+
   newMatiere: Matiere;
   
   constructor(private matiereservice: MatiereService) {
@@ -21,14 +21,17 @@ export class MatiereAddComponent implements OnInit {
     
   }
 
-
+  // addValues(): void {
+    
+  //   this.matiereservice.addMatiere(this.newMatiere).subscribe(matiere => {
+  //     this.matieres.push(matiere);
+  //   });
+  //   alert("La matiere a bien été ajoutée");   
+  // }
 
   addValues(): void {
-    
-    this.matiereservice.addMatiere(this.newMatiere).subscribe(matiere => {
-      this.matieres.push(matiere);
-    });
-    alert("La matiere a bien été ajoutée");   
+    this.matiereservice.addMatiere(this.newMatiere).subscribe();
+    alert("Matière bien ajoutée !");
   }
 
 /*   addDuree(duree: number): void {

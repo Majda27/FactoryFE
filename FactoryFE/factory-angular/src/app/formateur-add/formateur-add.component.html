@@ -8,23 +8,23 @@
     <form action="/action_page.php">
         <div class="form-group">
             <label>Nom:</label>
-            <input [(ngModel)]="newFormateur.nom"  placeholder="Nom" type="text"/>
+            <input [(ngModel)]="newFormateur.nom" name="nom" placeholder="Nom" />
         </div>
         <div class="form-group">
             <label>Prenom:</label>
-            <input [(ngModel)]="newFormateur.prenom" placeholder="Prenom" type="text"/>
+            <input [(ngModel)]="newFormateur.prenom" name="prenom" placeholder="Prenom" />
         </div>
         <div class="form-group">
             <label>Adresse:</label>
-            <input [(ngModel)]="newFormateur.adresse" placeholder="Adresse" type="text"/>
+            <input [(ngModel)]="newFormateur.adresse" name ="adresse" placeholder="Adresse" />
         </div>
         <div class="form-group">
             <label>Numero de telephone:</label>
-            <input [(ngModel)]="newFormateur.tel" placeholder="Numero de telephone" type="text"/>
+            <input [(ngModel)]="newFormateur.tel" name="tel" placeholder="tel"/>
         </div>
         <div class="form-group">
             <label>Matiere:</label>
-            <input [(ngModel)]="newFormateur.matiere" placeholder="Matiere" type="text"/>
+            <input [(ngModel)]="newFormateur.matiere" name="matiere" placeholder="Matiere" />
         </div>
 
         <button type="submit" class="btn btn-warning" (click)="addValues()" style="margin-top:30px;background-color: darkorange;margin-right: 30px;">Ajouter</button>
