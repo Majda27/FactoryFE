@@ -8,27 +8,27 @@
     <form action="/action_page.php">
         <div class="form-group">
             <label>Titre:</label>
-            <input [(ngModel)]="matiere.titre" placeholder="Titre" type="text"/>
+            <input [(ngModel)]="matiere.titre" placeholder="{{matiere.titre}}" type="text"/>
         </div>
         <div class="form-group">
             <label>Durée:</label>
-            <input [(ngModel)]="matiere.duree" placeholder="Durée" type="text"/>
+            <input [(ngModel)]="matiere.duree" placeholder="{{matiere.duree}}" type="text"/>
         </div>
         <div class="form-group">
             <label>Objectifs:</label>
-            <input [(ngModel)]="matiere.objectifs" placeholder="Objectifs" type="text"/>
+            <input [(ngModel)]="matiere.objectifs" placeholder="{{matiere.objectifs}}" type="text"/>
         </div>
         <div class="form-group">
             <label>Pré-requis:</label>
-            <input [(ngModel)]="matiere.prerequis" placeholder="Pré-requis" type="text"/>
+            <input [(ngModel)]="matiere.prerequis" placeholder="{{matiere.prerequis}}" type="text"/>
         </div>
         <div class="form-group">
             <label>Contenu:</label>
-            <input [(ngModel)]="matiere.contenu" placeholder="Contenu" type="text"/>
+            <input [(ngModel)]="matiere.contenu" placeholder="{{matiere.contenu}}" type="text"/>
         </div>
         <div class="form-group">
                 <label>Niveau:</label>
-                <input [(ngModel)]="matiere.niveau" placeholder="Niveau" type="text"/>
+                <input [(ngModel)]="matiere.niveau" placeholder="{{matiere.niveau}}" type="text"/>
             </div>
 
         <button type="submit" class="btn btn-warning" (click)="goBack()" style="margin-top:30px;background-color: darkorange;">Revenir en arriere</button>

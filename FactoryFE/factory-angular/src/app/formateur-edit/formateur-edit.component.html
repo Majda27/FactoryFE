@@ -8,23 +8,23 @@
     <form action="/action_page.php">
         <div class="form-group">
             <label>Nom:</label>
-            <input [(ngModel)]="formateur.nom" placeholder="Nom" type="text"/>
+            <input [(ngModel)]="formateur.nom" placeholder="{{formateur.nom}}" type="text"/>
         </div>
         <div class="form-group">
             <label>Prenom:</label>
-            <input [(ngModel)]="formateur.prenom" placeholder="Prenom" type="text"/>
+            <input [(ngModel)]="formateur.prenom" placeholder="{{formateur.prenom}}" type="text"/>
         </div>
         <div class="form-group">
             <label>Adresse:</label>
-            <input [(ngModel)]="formateur.adresse" placeholder="Adresse" type="text"/>
+            <input [(ngModel)]="formateur.adresse" placeholder="{{formateur.adresse}}" type="text"/>
         </div>
         <div class="form-group">
             <label>Numero de telephone:</label>
-            <input [(ngModel)]="formateur.tel" placeholder="Numero de telephone" type="text"/>
+            <input [(ngModel)]="formateur.tel" placeholder="{{formateur.tel}}" type="text"/>
         </div>
         <div class="form-group">
             <label>Matiere:</label>
-            <input [(ngModel)]="formateur.matiere" placeholder="Matiere" type="text"/>
+            <input [(ngModel)]="formateur.matiere" placeholder="{{formateur.matiere}}" type="text"/>
         </div>
 
         <button type="submit" class="btn btn-warning" (click)="goBack()" style="margin-top:30px;background-color: darkorange;">Revenir en arriere</button>
